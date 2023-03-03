@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import "./App.css";
 import Favicon from "../src/favicon/favicon.ico";
-import Routes from "./routing";
+import Header from "./pages/header";
 function App() {
   return (
     <div className="App">
@@ -9,6 +9,7 @@ function App() {
         <title>Aladdin Alizada</title>
         <link rel="shortcut icon" href={Favicon} type="image/x-icon" />
       </Helmet>
+      <Header />
     </div>
   );
 }
