@@ -10,7 +10,7 @@ function App() {
         <title>Aladdin Alizada</title>
         <link rel="shortcut icon" href={Favicon} type="image/x-icon" />
       </Helmet>
-      <Header />
+      {/* <Header /> */}
       <Introduction />
     </div>
   );

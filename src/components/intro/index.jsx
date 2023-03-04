@@ -5,20 +5,29 @@ import { useTranslation } from "react-i18next";
 const Introduction = () => {
   const { t, i18n } = useTranslation();
 
-  const handleLang = (lang) => {
-    i18n.changeLanguage(lang);
+  const handleSelect = (e) => {
+    i18n.changeLanguage(e.target.value);
+    // set the language from the local storage
+    const language = localStorage.setItem("i18nextLng", e.target.value);
   };
   return (
     <div>
       <div className="intro">
         <div className="changeButtons">
-          <button onClick={() => handleLang("en")}>English</button>
-          <button onClick={() => handleLang("az")}>Azərbaycanca</button>
+          <select
+            name="language"
+            id="language"
+            onClick={(e) => handleSelect(e)}
+          >
+            <option value="en">English</option>
+            <option value="az">Azerbaijan</option>
+          </select>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
               <h3 class="animate-charcter">{t("intro")}</h3>
+              <p>{t("name")}</p>
             </div>
           </div>
         </div>
