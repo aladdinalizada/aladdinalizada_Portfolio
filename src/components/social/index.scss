@@ -1,0 +1,38 @@
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin: 0 1rem;
+      list-style-type: none;
+      a {
+        color: #000;
+        font-size: 2rem;
+        transition: all 0.3s ease-in-out;
+        i {
+          color: #000;
+        }
+      }
+      &:hover {
+        transform: scale(1.2);
+        transition: 1s;
+        a {
+          color: #000;
+          i {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
