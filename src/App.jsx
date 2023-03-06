@@ -4,6 +4,7 @@ import Favicon from "../src/favicon/favicon.ico";
 import Header from "./pages/header";
 import Introduction from "./components/intro";
 import SocialMedia from "./components/social";
+import Contact from "./components/contact";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
       {/* <Header /> */}
       <Introduction />
       <SocialMedia />
+      <Contact />
     </div>
   );
 }

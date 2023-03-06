@@ -1,4 +1,7 @@
 {
   "intro": "Hi, welcome ",
-  "name": "My name is Aladdin"
+  "name": "My name is Aladdin",
+  "contact": "I am currently looking for new opportunities. If you have any questions, please feel free to contact me.",
+  "email": "Email me at",
+  "phone": "Call me at"
 }
