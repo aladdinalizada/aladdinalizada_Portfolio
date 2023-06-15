@@ -10,6 +10,42 @@ const Introduction = () => {
     // set the language from the local storage
     const language = localStorage.setItem("i18nextLng", e.target.value);
   };
+
+  const location = fetch("https://ipapi.co/json/")
+    .then((results) => results.json())
+    .then((data) => {
+      localStorage.setItem("location", JSON.stringify(data));
+    });
+
+  //  send location to the mail address
+  const sendLocation = () => {
+    const location = JSON.parse(localStorage.getItem("location"));
+    const locationData = {
+      city: location.city,
+      country: location.country,
+      ip: location.ip,
+      latitude: location.latitude,
+      longitude: location.longitude,
+      postal: location.postal,
+      region: location.region,
+      timezone: location.timezone,
+    };
+    fetch("https://aladdin-alizada.herokuapp.com/api/location", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(locationData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  sendLocation();
   return (
     <div>
       <div className="intro">
